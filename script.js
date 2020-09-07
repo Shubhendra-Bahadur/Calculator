@@ -48,14 +48,14 @@ function operation()
         operand2=parseFloat(text);
         var result=eval(operand1+' '+operator+' '+operand2);
          result=result.toString(10);
-           if(result.length<=11){
+           if(result.length<=10){
                display.textContent=result;
                 operand1=result;
                 operand2=null;
                 operator=null;
            }
            else{
-               display.textContent=result.slice(0,9)+'...';
+               display.textContent=result.slice(0,7)+'...';
            }
     }
     else{
