@@ -3,6 +3,7 @@ var display=document.getElementById("display");
 var operand1=0;
 var operand2=null;
 var operator=null;
+var result;
 
 function arithmatic(value)
 {
@@ -47,16 +48,10 @@ function operation()
     {
         operand2=parseFloat(text);
         var result=eval(operand1+' '+operator+' '+operand2);
-         result=result.toString(10);
-           if(result.length<=10){
                display.textContent=result;
                 operand1=result;
                 operand2=null;
                 operator=null;
-           }
-           else{
-               display.textContent=result.slice(0,7)+'...';
-           }
     }
     else{
         display.textContent+=value;
