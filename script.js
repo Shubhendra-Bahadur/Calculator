@@ -55,7 +55,7 @@ function operation()
                 operator=null;
            }
            else{
-               display.textContent="range out of bound"
+               display.textContent=result.slice(0,9)+'...';
            }
     }
     else{
