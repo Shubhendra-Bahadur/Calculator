@@ -47,18 +47,25 @@ function operation()
     {
         operand2=parseFloat(text);
         var result=eval(operand1+' '+operator+' '+operand2);
-            display.textContent=result;
-            operand1=result;
-            operand2=null;
-            operator=null;
+         result=result.toString(10);
+           if(result.length<=11){
+               display.textContent=result;
+                operand1=result;
+                operand2=null;
+                operator=null;
+           }
+           else{
+               display.textContent="range out of bound"
+           }
     }
     else{
         display.textContent+=value;
     }
-
+   
 }
 
 for(var i=0;i<buttons.length;i++)
 {
     buttons[i].addEventListener('click',operation);
+    display.style.fontSize="2.8rem";
 }
